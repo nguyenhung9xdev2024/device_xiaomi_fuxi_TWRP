@@ -53,6 +53,8 @@ BOARD_RAMDISK_USE_LZ4 := true
 # A/B
 BOARD_EXCLUDE_KERNEL_FROM_RECOVERY_IMAGE := true
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
+BOARD_ROOT_EXTRA_FOLDERS := bluetooth dsp firmware persist metadata
+BOARD_SUPPRESS_SECURE_ERASE := true
 
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS += \
@@ -144,7 +146,6 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel0-backlight/brightness"
 TW_MAX_BRIGHTNESS := 2047
 TW_EXTRA_LANGUAGES := true
-TW_DEFAULT_LANGUAGE := zh_CN
 TW_DEFAULT_BRIGHTNESS := 200
 TW_EXCLUDE_APEX := true
 TW_HAS_EDL_MODE := true
@@ -158,4 +159,4 @@ TW_LOAD_VENDOR_MODULES := "adsp_loader_dlkm.ko fts_touch_spi.ko qti_battery_char
 TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone35/temp"
 TW_BATTERY_SYSFS_WAIT_SECONDS := 6
 TW_BACKUP_EXCLUSIONS := /data/fonts
-TW_DEVICE_VERSION := Xiaomi_13-A13
+TW_DEVICE_VERSION := Xiaomi_13-A14
